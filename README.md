@@ -6,7 +6,7 @@ High-Performance Network Traffic Classification using Deep Learning, Oversamplin
 This project presents an optimized Convolutional Neural Network (CNN)-based system for network traffic classification in Software-Defined Networking (SDN) environments. It handles class imbalance using Random Oversampling and improves model generalization through a custom early stopping mechanism. Built with TensorFlow and Keras, the system achieves near-perfect classification performance with strong scalability and robustness.
 
 ## Key Features
-- High-Accuracy Classification (~99–100%) using Stratified K-Fold cross-validation  
+- High-Accuracy Classification (~99.13%) using Stratified K-Fold cross-validation  
 - Imbalance Handling with RandomOverSampler (TCP, UDP, BENIGN)  
 - Custom Early Stopping (threshold-based) to prevent overfitting  
 - Robust Evaluation (Confusion Matrix, ROC, Precision-Recall, MCC)  
@@ -24,7 +24,7 @@ This project presents an optimized Convolutional Neural Network (CNN)-based syst
 Python, TensorFlow, Keras, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn  
 
 ## Results
-- Accuracy: ~99–100%  
+- Accuracy: ~99.13%  
 - Very low false positives, high true positives  
 - Strong MCC and ROC-AUC performance  
 
