@@ -1,37 +1,37 @@
-# Optimized CNN-Based Network Traffic Classification for SDN
-
-High-Performance Network Traffic Classification using Deep Learning, Oversampling, and Custom Early Stopping
+# SDN Traffic Classification using Optimized CNN with Oversampling and Custom Early Stopping
 
 ## Overview
-This project presents an optimized Convolutional Neural Network (CNN)-based system for network traffic classification in Software-Defined Networking (SDN) environments. It handles class imbalance using Random Oversampling and improves model generalization through a custom early stopping mechanism. Built with TensorFlow and Keras, the system achieves near-perfect classification performance with strong scalability and robustness.
+This project presents an optimized Convolutional Neural Network (CNN)-based system for network traffic classification in Software-Defined Networking (SDN) environments. The model leverages **37 network flow features** and handles class imbalance using Random Oversampling, while improving generalization through a custom threshold-based early stopping mechanism. Built with TensorFlow and Keras, the system achieves high classification performance with strong scalability and robustness.
 
 ## Key Features
 - High-Accuracy Classification (~99.13%) using Stratified K-Fold cross-validation  
-- Imbalance Handling with RandomOverSampler (TCP, UDP, BENIGN)  
+- Multi-class Traffic Classification (TCP, UDP, BENIGN)  
+- Imbalance Handling with RandomOverSampler  
 - Custom Early Stopping (threshold-based) to prevent overfitting  
 - Robust Evaluation (Confusion Matrix, ROC, Precision-Recall, MCC)  
 - Optimized Training (Batch Normalization, Dropout, Learning Rate Scheduling)  
 
 ## Repository Structure
-- notebook.ipynb → CNN model training & evaluation  
+- notebook.ipynb → CNN model training and evaluation  
 - preprocessing.py → Data preprocessing (scaling, encoding)  
 - requirements.txt → Dependencies  
 
 ## Dataset
-- SDN Flow Dataset for multi-class traffic classification (TCP, UDP, BENIGN) with imbalanced data scenarios  
+- SDN Flow Dataset used for multi-class classification of network traffic (TCP, UDP, BENIGN) with imbalanced data distribution  
 
 ## Tech Stack
 Python, TensorFlow, Keras, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn  
 
 ## Results
 - Accuracy: ~99.13%  
-- Very low false positives, high true positives  
-- Strong MCC and ROC-AUC performance  
+- Strong performance across TCP, UDP, and BENIGN classes  
+- Very low false positives with high true positive rate  
+- Robust evaluation using MCC (~0.98) and ROC-AUC  
 
 ## Future Improvements
-- Real-time deployment for live traffic monitoring  
-- Explore LSTM / Transformer-based models  
-- Improve generalization on larger datasets  
+- Integrate real-time SDN controller for live traffic monitoring  
+- Explore advanced architectures (LSTM, Transformer-based models)  
+- Improve generalization on larger and more diverse datasets  
 
 ## Author
 Farhan Ashraf  
