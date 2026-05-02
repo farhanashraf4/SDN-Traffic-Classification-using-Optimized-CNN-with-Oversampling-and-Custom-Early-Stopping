@@ -1,24 +1,40 @@
-# DDoS-Attack-Detection-for-SDN-Specific-Data
+# Optimized CNN-Based Network Traffic Classification for SDN
 
-**CNN-Based DDoS Detection System for SDN Environments**
+High-Performance Network Traffic Classification using Deep Learning, Oversampling, and Custom Early Stopping
 
 ## Overview
-This repository contains a Convolutional Neural Network (CNN)-based system designed for detecting DDoS attacks in Software-Defined Networking (SDN) environments. The system focuses on achieving high accuracy and scalability using TensorFlow and Keras for model development, scikit-learn for data preprocessing, and Python for implementation.
+This project presents an optimized Convolutional Neural Network (CNN)-based system for network traffic classification in Software-Defined Networking (SDN) environments. It handles class imbalance using Random Oversampling and improves model generalization through a custom early stopping mechanism. Built with TensorFlow and Keras, the system achieves near-perfect classification performance with strong scalability and robustness.
 
 ## Key Features
-- **Multi-class Classification:** Successfully classified traffic types (TCP, UDP, BENIGN) with >95% accuracy in the SDN Flow dataset.
-- **Performance Evaluation:** Confusion matrices and ROC curves demonstrate robust performance, minimizing false positives and maximizing true positives.
-- **Feature Importance Graph** A visual representation ranking features by their significance in predicting DDoS attacks, using a Random Forest classifier to highlight the most critical features for accurate classification in an SDN environment.
+- High-Accuracy Classification (~99–100%) using Stratified K-Fold cross-validation  
+- Imbalance Handling with RandomOverSampler (TCP, UDP, BENIGN)  
+- Custom Early Stopping (threshold-based) to prevent overfitting  
+- Robust Evaluation (Confusion Matrix, ROC, Precision-Recall, MCC)  
+- Optimized Training (Batch Normalization, Dropout, Learning Rate Scheduling)  
 
 ## Repository Structure
-- Jupyter notebook containing CNN model development.
-- Script for data preprocessing using scikit-learn.
-- Dependencies required for running the project.
+- notebook.ipynb → CNN model training & evaluation  
+- preprocessing.py → Data preprocessing (scaling, encoding)  
+- requirements.txt → Dependencies  
 
 ## Dataset
-- **SDN DDoS Dataset:** Utilized for multi-class classification of traffic types.
+- SDN Flow Dataset for multi-class traffic classification (TCP, UDP, BENIGN) with imbalanced data scenarios  
+
+## Tech Stack
+Python, TensorFlow, Keras, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn  
+
+## Results
+- Accuracy: ~99–100%  
+- Very low false positives, high true positives  
+- Strong MCC and ROC-AUC performance  
 
 ## Future Improvements
-- Enhance model efficiency and performance metrics.
-- Expand dataset coverage and diversity.
-- Incorporate real-time monitoring and adaptive learning mechanisms.
+- Real-time deployment for live traffic monitoring  
+- Explore LSTM / Transformer-based models  
+- Improve generalization on larger datasets  
+
+## Author
+Farhan Ashraf  
+GitHub: https://github.com/farhanashraf4  
+
+## If you found this useful, consider giving it a star.
